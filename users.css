@@ -1,0 +1,33 @@
+.user-card {
+
+    padding: 10px;
+    border: 5px double black;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-around;
+    display: inline-block;
+
+}
+
+
+#numberOfUsers {
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+}
+
+
+#searchInput {
+    width: 25%;
+    display: inline-block;
+    align-items: center;
+}
+
+
+.action-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* Adjust as needed */
+}
