@@ -66,10 +66,10 @@ function getSingleUserUI(userData) {
 
     if (userData.isSelected === true) {
         button.innerText = "UnSelect"
-        userContainerDiv.style.background = "white"
+        userContainerDiv.style.background = "pink"
     } else {
         button.innerText = "Select"
-        userContainerDiv.style.background = "pink"
+        userContainerDiv.style.background = "white"
     }
 
     button.addEventListener("click", function () {
@@ -87,8 +87,15 @@ function getSingleUserUI(userData) {
 
     buttonDelete.innerText = "Delete";
     buttonDelete.addEventListener("click", function () {
-        userContainerDiv.remove();
+        const foundIndex = users.findIndex(user => user.name.first.toLowerCase() === userData.name.first.toLowerCase() && user.name.last.toLowerCase() === userData.name.last.toLowerCase())
+        if (foundIndex > -1) {
+            users.splice(foundIndex, 1)
+
+        }
+        draw(users)
     });
+
+
 
 
 
